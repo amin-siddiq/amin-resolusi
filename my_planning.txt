@@ -3,6 +3,7 @@ Research:
 -melaporkan monitoring sestim magister/bulan
 -loog book untuk catatan panting/penemuan hal baru
 -setiap semester harus ada target publikasi
+-publikasi paper/journal yang bereputasi
 
 Next TO DO 
 JOURNAL TARGET
