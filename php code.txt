@@ -1,8 +1,10 @@
 <?php
 a=10
 b=5
+tambah = a + b;
 luas = a * b;
 echo (luas)
+echo (tambah)
 echo ("hello world")
 echo ("hello world")
 ?>
