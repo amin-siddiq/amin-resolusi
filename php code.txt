@@ -1,6 +1,8 @@
 <?php
 a=10
 b=5
-echo"hello world"
-echo"hello world"
+luas = a * b;
+echo (luas)
+echo ("hello world")
+echo ("hello world")
 ?>
