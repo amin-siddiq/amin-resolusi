@@ -1,0 +1,33 @@
+import numpy as np
+import cv2
+import matplotlib.pyplot as plt
+# Load image, grayscale, Otsu's threshold, and extract ROI
+
+
+for a in range(200):
+    b=int(a)+1
+    
+    if (b >= 1 and b<=9):
+        d="00"
+    elif (b >= 10 and b<=99):
+        d="0"
+    else:
+        d=""
+        
+    print(d,b)       
+    image = cv2.imread("mask_train/{}{}.png".format(d,b))
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
+    x,y,w,h = cv2.boundingRect(thresh)
+   
+    img_asli = cv2.imread("images/{}{}.jpg".format(d,b))
+    img_mask = cv2.imread("mask_cup/{}{}.png".format(d,b))
+    
+    crop_img_asli = img_asli[y:y+h, x:x+w]
+    crop_img_mask = img_mask[y:y+h, x:x+w]
+
+    # Saving the image 
+    cv2.imwrite(("crop/{}{}.jpg".format(d,b)), crop_img_asli )
+    cv2.imwrite(("mask_result/{}{}.png".format(d,b)), crop_img_mask ) 
+else:
+  print("Finally finished!")
