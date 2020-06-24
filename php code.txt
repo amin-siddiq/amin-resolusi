@@ -1,6 +1,10 @@
 <?php
-a=10
-b=5
+a=100
+b=2
+bagi = a/b;
+kurang = a - b;
+echo (bagi);
+echo (kurang);
 echo"hello world"
 echo"hello world"
 ?>
