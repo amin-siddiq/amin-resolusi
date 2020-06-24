@@ -1,10 +1,10 @@
 <?php
-a=10
-b=5
+a=100
+b=2
 tambah = a + b;
 luas = a * b;
-echo (luas)
-echo (tambah)
+echo (luas);
+echo (tambah);
 echo ("hello world")
 echo ("hello world")
 ?>
